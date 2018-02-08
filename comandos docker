@@ -1,0 +1,39 @@
+docker container ls | ps | list          //lista container ativos       
+
+docker container ls | ps | list -a       //lista todos os cantainers ativos e os desativados
+
+docker container run <nomeImage>         //executa container
+
+docker container run --rm <nomeImage>     //após execução exclui o container
+
+docker container run -it <nomeImage> bash   //-i ativa modo interativo; -t ativa acesso container pelo terminal
+
+docker container run --name <coloca_nome> -it <nomeImage> bash  //define nome, que deve ser unico, para os containers
+
+docker container start <nomeContainer>       //inicia e reutiliza um container ja existente
+
+docker container stop <nomeContainer>       //finaliza execução de um container
+
+docker container restart <nomeContainer>       //reinicia um container
+
+docker container run -p 8080:80 <nomeImage>   //mapear portas container: 80 é a porta interna enquanto que a 8080 é a porta externa.
+						//-v usado para diretótios
+docker container run -d           //executa container em segundo plano
+
+docker container logs <nomeContainer>  // exibe logs de containers rodando em segundo plano
+
+docker container inspect <nomeContainer>  // exibe características do container
+
+docker container run -p 8080:80 -v $(pwd)/html:/usr/share/nginx/html nginx
+
+docker container run <nomeImage> bash --version
+
+docker container exec <nomeContainer> uname -or
+
+bash --version           //lista versão bash
+
+touch //cria um arquivo
+
+
+
+
